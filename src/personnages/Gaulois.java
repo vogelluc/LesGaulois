@@ -1,4 +1,5 @@
 package personnages;
+import villagegaulois.Village;
 
 public class Gaulois {
 	
@@ -9,11 +10,12 @@ public class Gaulois {
 	private String nom;
 	private int force;
 	private int effetPotion = 1;
+    private villagegaulois.Village village;
+
 	public Gaulois(String nom, int force) {
 		super();
 		this.nom = nom;
-		this.force = force;
-		this.effetPotion = effetPotion;
+		this.force = force;		
 	}
 	
 	
@@ -49,7 +51,4 @@ public class Gaulois {
 	public void boirePotion(int forcePotion) {
 	    this.effetPotion = forcePotion;
 	}
-
 }
-
-
