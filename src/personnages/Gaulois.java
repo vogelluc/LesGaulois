@@ -29,7 +29,6 @@ public class Gaulois {
 	}
 
 	private String prendreParole() {
-		// TODO Auto-generated method stub
 		return "Le gaulois "+ nom + " : ";
 	}
 
@@ -51,4 +50,21 @@ public class Gaulois {
 	public void boirePotion(int forcePotion) {
 	    this.effetPotion = forcePotion;
 	}
+
+    public void setVillage(Village village) {
+        this.village = village;
+    }
+    public Village getVillage() {
+        return village;
+    }
+    public void sePresenter() {
+        if (village == null) {
+            System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom + ". Je voyage de villages en villages.\"");
+        } else if (village.getChef() == this) {
+            System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom + ". Je suis le chef le village " + village.getNom() + ".\"");
+        } else {
+            System.out.println("Le Gaulois " + nom + " : \"Bonjour, je m'appelle " + nom + ". J'habite le village " + village.getNom() + ".\"");
+        }
+    }
+
 }
